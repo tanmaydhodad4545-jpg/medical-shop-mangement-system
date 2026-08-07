@@ -1,2 +1,0 @@
-﻿# medical-shop-mangement-system
-Developed a Medical Shop Management System for managing medicine stock,   customer records ,Expired medicine and billing. The project helps organize daily pharmacy operations efficiently and accurately.
