@@ -2,25 +2,47 @@
 <html>
 <head>
     <title>Medical Shop Management System</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" 
+    href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
 <header>
     <h1>Medical Shop Management System</h1>
 </header>
 
+
 <nav>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="products.html">Medicines</a>
-    <a href="customers.html">Customers</a>
-    <a href="billing.html">Billing</a>
+
+<a href="{{ url_for('dashboard') }}">
+Dashboard
+</a>
+
+<a href="#">
+Medicines
+</a>
+
+<a href="#">
+Customers
+</a>
+
+<a href="#">
+Billing
+</a>
+
 </nav>
 
-<section>
-    <h2>Welcome Admin</h2>
+
+<section class="dashboard">
+
+<h2>Welcome Admin</h2>
+
 </section>
 
-<script src="js/script.js"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 </html>

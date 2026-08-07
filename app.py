@@ -1,25 +1,17 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
 
-app = Flask(__name__)
+@app.route("/medicines")
+def medicines():
+    return render_template("products.html")
 
-app.config["SECRET_KEY"] = "medicalshop123"
 
-app.config["SQLALCHEMY_DATABASE_URI"] = \
-    "mysql+pymysql://root:password@localhost/medical_shop"
+@app.route("/customers")
+def customers():
+    return render_template("customers.html")
 
-db = SQLAlchemy(app)
 
-from routes import auth, medicine, customer, billing
-
-if __name__ == "__main__":
-    app.run(debug=True)
-from flask import Flask
-
-app = Flask(__name__)
-
-app = Flask(
-    __name__,
-    static_folder="static",
-    template_folder="templates"
-)    
+@app.route("/billing")
+def billing():
+    return render_template("billing.html")
