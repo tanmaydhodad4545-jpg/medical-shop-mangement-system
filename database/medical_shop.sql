@@ -1,0 +1,33 @@
+CREATE DATABASE medical_shop;
+
+USE medical_shop;
+
+CREATE TABLE medicines(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+company VARCHAR(100),
+price DECIMAL(10,2),
+quantity INT,
+expiry DATE
+);
+
+CREATE TABLE customers(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(100),
+phone VARCHAR(15)
+);
+
+CREATE TABLE sales(
+id INT PRIMARY KEY AUTO_INCREMENT,
+medicine_id INT,
+customer_id INT,
+quantity INT,
+total DECIMAL(10,2),
+sale_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users(
+id INT PRIMARY KEY AUTO_INCREMENT,
+username VARCHAR(50),
+password VARCHAR(255)
+);
